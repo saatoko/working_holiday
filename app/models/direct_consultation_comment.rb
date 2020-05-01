@@ -1,0 +1,2 @@
+class DirectConsultationComment < ApplicationRecord
+end

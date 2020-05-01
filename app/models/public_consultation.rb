@@ -1,0 +1,2 @@
+class PublicConsultation < ApplicationRecord
+end
