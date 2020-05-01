@@ -1,0 +1,2 @@
+class PublicConsultationComment < ApplicationRecord
+end
