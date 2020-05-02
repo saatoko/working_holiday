@@ -58,6 +58,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Add
 gem 'devise'
 gem 'haml-rails'
-gem "font-awesome-sass"
+gem 'font-awesome-sass'
 gem 'pry-rails'
 gem 'sassc-rails'
+gem 'active_hash'
