@@ -23,4 +23,9 @@ class User < ApplicationRecord
   validates :country,            presence: true
   validates :experience_country, presence: true
   validates :duration,           presence: true
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to_active_hash :age
+  belongs_to_active_hash :gender
+  belongs_to_active_hash :profession
 end
