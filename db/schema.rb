@@ -87,11 +87,9 @@ ActiveRecord::Schema.define(version: 2020_05_01_102933) do
   end
 
   create_table "situations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.bigint "country_id", null: false
     t.string "situation", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["country_id"], name: "index_situations_on_country_id"
   end
 
   create_table "user_notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -145,7 +143,6 @@ ActiveRecord::Schema.define(version: 2020_05_01_102933) do
   add_foreign_key "public_consultation_comments", "users"
   add_foreign_key "public_consultations", "countries"
   add_foreign_key "public_consultations", "users"
-  add_foreign_key "situations", "countries"
   add_foreign_key "user_notifications", "direct_consultation_comments"
   add_foreign_key "user_notifications", "direct_consultations"
   add_foreign_key "user_notifications", "public_consultation_comments"

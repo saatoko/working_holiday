@@ -25,6 +25,6 @@ Country.seed(:id,
   { id: 24, country: "スペイン"},
   { id: 25, country: "エストニア"},
   { id: 26, country: "オランダ"},
-  { id: 27, country: "ワーキングホリデー協定国のみの記載のため、一覧にない国の経験者"},
-  { id: 28, country: "渡航予定のない方"}
+  { id: 27, country: "ワーキングホリデー協定国のみの記載のため、一覧にない国"},
+  { id: 28, country: "渡航予定なし"}
 )
