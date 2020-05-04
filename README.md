@@ -7,7 +7,6 @@
 
 ### Association
 - has_many :users
-- has_many :situations
 - has_many :articles
 - has_many :public_consultations
 
@@ -16,12 +15,10 @@
 |Column|Type|Options|
 |------|----|-------|
 |situation|string|null: false|
-|country_id|references|null: false, foreign_key: true|
 
 ### Association
 - has_many :users
 - has_many :articles
-- belongs_to :country
 
 
 ## usersテーブル
