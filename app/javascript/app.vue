@@ -8,7 +8,7 @@
 export default {
   data: function () {
     return {
-      message: "Hello Vue!"
+      message: "ワーキングホリデー相談掲示板"
     }
   }
 }
@@ -18,5 +18,6 @@ export default {
 p {
   font-size: 2em;
   text-align: center;
+  
 }
 </style>
