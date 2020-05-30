@@ -1,8 +1,7 @@
-import Vue from "vue";
-// import Index from "../../components/home/Index.vue";
+import Vue from 'vue/dist/vue.esm';
 
-const app = new Vue({
-  el: "#home-app",
+const home = new Vue({
+  
   
   
 })
