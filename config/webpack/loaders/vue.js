@@ -3,9 +3,7 @@ module.exports = {
     rules: [
       {
         test: /\.vue(\.erb)?$/,
-        use: [{
-          loader: 'vue-loader'
-        }],
+        use: ["vue-loader"],
       },
       {
         test: /\.vue$/, 
