@@ -1,15 +1,17 @@
 <template lang="haml">
   -# %article
   -# %h1.title {{ title }}
-</template>
-
-<template>
-  
+  %h1{id: "subid"} {{ sub }}
 </template>
 
 <script>
+
 export default {
-  
+  data: function () {
+    return {
+      sub: "ワーキング"
+    }
+  },
 }
 </script>
 
