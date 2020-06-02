@@ -58,6 +58,16 @@ import Vue from 'vue/dist/vue.esm'
 // import Vuex from 'vuex'
 import App from '../app.vue'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faHome, faPlaneDeparture, faEnvelopeOpenText, faUser, faSearch, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
+import { faEye } from '@fortawesome/free-regular-svg-icons'
+// config.showMissingIcons = false;
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faHome, faPlaneDeparture, faEnvelopeOpenText, faUser, faSearch, faInfoCircle, faEye)
+
+Vue.component('v-fa', FontAwesomeIcon);
+
 Vue.use(TurbolinksAdapter)
 
 document.addEventListener('turbolinks:load', () => {
