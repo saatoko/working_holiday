@@ -1,29 +1,29 @@
 <template lang="haml">
-  %div
-    %h1.title {{ app_name }}
-      %p.title__sub {{app_subtitle}}
+  %div.home
+    %Header
+    -# %Footer
 </template>
 
 <script>
-
+import Header from "../header";
+// import Footer from "../footer";
 export default {
   data: function () {
     return {
-      app_name: "ワーキングホリデー相談掲示板",
-      app_subtitle: "経験談、相談、計画、なんでも投稿可能！",
-      // name: 'Home'
+      name: 'Home'
     }
   },
+  components: { Header },
+  // components: { Footer },
 }
+
 </script>
 
 <style scoped lang="scss" scoped>
-.title {
-  font-size: 2rem;
-  text-align: center;
-  &__sub {
-    font-size: 1rem;
-    color: blue;
-  }
+.home {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 </style>
