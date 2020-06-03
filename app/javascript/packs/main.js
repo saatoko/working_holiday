@@ -57,7 +57,7 @@ import TurbolinksAdapter from 'vue-turbolinks'
 import Vue from 'vue/dist/vue.esm'
 // import Vuex from 'vuex'
 import App from '../app.vue'
-import Router from "../router/router.js";
+// import Router from "../router/router.js";
 
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -75,16 +75,16 @@ document.addEventListener('turbolinks:load', () => {
   const el = document.body.appendChild(document.createElement('hello'))
   const app = new Vue({
     el,
-    Router,
+    // Router,
     render: h => h(App),
     components: { App },
     
   })
 
   // console.log(app)
-//   const app = new Vue({
-//     el: '#hello',
-//     components: { App },
-//     Router
-//   })
+  // const app = new Vue({
+  // el: '#hello',
+  // components: { App },
+  // Router
+  // })
 })

@@ -3,7 +3,7 @@
   -#   %router-link{to: "{ name: 'home'}"}
   -#   %router.push({ name: 'home'})
 
-    -# %Home
+  %Home
 </template>
 
 <script>
