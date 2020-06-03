@@ -14,7 +14,7 @@ export default {
     return {
       app_name: "ワーキングホリデー相談掲示板",
       app_subtitle: "経験談、相談、計画、なんでも投稿！!",
-      name: 'Header'
+      // name: 'Header'
     }
   },
   components: { Navbar },
@@ -37,6 +37,7 @@ export default {
     display: flex;
     -webkit-align-items: center; 
     align-items: center; 
+    font-family: ヒラギノ丸ゴ ProN;
     &__home {
     font-size: 3rem;
     }
@@ -45,14 +46,12 @@ export default {
       text-align: center;
       padding-left: 1rem;
       font-weight: bold;
-      font-family: ヒラギノ丸ゴ ProN;
       letter-spacing: 0.2rem;
     }
     &__subtitle {
       margin-left:auto;
       font-size: 1.3rem;
       color: rgb(228, 223, 195);
-      font-family: ヒラギノ丸ゴ ProN;
     }
   }
 }

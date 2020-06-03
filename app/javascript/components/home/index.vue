@@ -1,20 +1,22 @@
 <template lang="haml">
   %div.home
     %Header
-    -# %Footer
+   
+
+    %Footer
 </template>
 
 <script>
 import Header from "../header";
-// import Footer from "../footer";
+import Footer from "../footer";
+
 export default {
-  data: function () {
-    return {
-      name: 'Home'
-    }
-  },
-  components: { Header },
-  // components: { Footer },
+  // data: function () {
+  //   return {
+  //     name: 'Home'
+  //   }
+  // },
+  components: { Header, Footer },
 }
 
 </script>
