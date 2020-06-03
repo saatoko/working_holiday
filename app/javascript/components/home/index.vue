@@ -19,7 +19,7 @@ export default {
   //     name: 'Home'
   //   }
   // },
-  components: { Header, Footer },
+  components: { Header,},
 }
 
 </script>
