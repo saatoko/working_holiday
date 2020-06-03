@@ -3,12 +3,15 @@
     %Header
    
 
-    %Footer
+    -# %Footer
 </template>
 
 <script>
-import Header from "../header";
-import Footer from "../footer";
+// import Header from "../header";
+// import Footer from "../footer";
+
+import Header from "../Header.vue";
+// import Footer from "../Footer.vue";
 
 export default {
   // data: function () {

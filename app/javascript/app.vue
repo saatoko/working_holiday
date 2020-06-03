@@ -1,7 +1,7 @@
 <template lang="haml">
-  %div{id: "app"}
-    %router-link{to: "{ name: 'home'}"}
-    -# %router.push({ name: 'home'})
+  -# %div{id: "app"}
+  -#   %router-link{to: "{ name: 'home'}"}
+  -#   %router.push({ name: 'home'})
 
     -# %Home
 </template>
@@ -15,9 +15,9 @@ export default {
   
 }
 
-var app = new Vue({
-  router: router
-}).$mount('#app')
+// var app = new Vue({
+//   router: router
+// }).$mount('#app')
 
 
 </script>
