@@ -8,7 +8,9 @@
 </template>
 
 <script>
-import Navbar from "./navbar";
+// import Navbar from "./navbar";
+
+import Navbar from "./Navbar.vue";
 export default {
   data: function () {
     return {
