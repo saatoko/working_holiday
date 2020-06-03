@@ -15,11 +15,11 @@
 
 <script>
 export default {
-  data: function () {
-    return {
-      name: 'Navbar',
-    }
-  },
+  // data: function () {
+  //   return {
+  //     name: 'Navbar',
+  //   }
+  // },
 }
 </script>
 

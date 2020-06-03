@@ -57,11 +57,12 @@ import TurbolinksAdapter from 'vue-turbolinks'
 import Vue from 'vue/dist/vue.esm'
 // import Vuex from 'vuex'
 import App from '../app.vue'
+import Router from "../router/router.js";
+
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faHome, faPlaneDeparture, faEnvelopeOpenText, faUser, faSearch, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import { faEye } from '@fortawesome/free-regular-svg-icons'
-// config.showMissingIcons = false;
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(faHome, faPlaneDeparture, faEnvelopeOpenText, faUser, faSearch, faInfoCircle, faEye)
@@ -71,13 +72,19 @@ Vue.component('v-fa', FontAwesomeIcon);
 Vue.use(TurbolinksAdapter)
 
 document.addEventListener('turbolinks:load', () => {
+  const el = document.body.appendChild(document.createElement('hello'))
   const app = new Vue({
-    el: '#hello',
-    // data: () => {
-    //   return {
-    //     message: "Can you say hello?",
-    //   }
-    // },
+    el,
+    Router,
+    render: h => h(App),
     components: { App },
+    
   })
+
+  // console.log(app)
+//   const app = new Vue({
+//     el: '#hello',
+//     components: { App },
+//     Router
+//   })
 })
