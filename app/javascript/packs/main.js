@@ -53,11 +53,15 @@
 //
 // Then uncomment the code block below:
 //
+
 import TurbolinksAdapter from 'vue-turbolinks'
+
 import Vue from 'vue/dist/vue.esm'
-// import Vuex from 'vuex'
 import App from '../app.vue'
-// import Router from "../router/router.js";
+// import Vuex from 'vuex'
+
+import router from "../router/router.js"
+import VueRouter from 'vue-router'
 
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -69,22 +73,16 @@ library.add(faHome, faPlaneDeparture, faEnvelopeOpenText, faUser, faSearch, faIn
 
 Vue.component('v-fa', FontAwesomeIcon);
 
-Vue.use(TurbolinksAdapter)
+Vue.use(TurbolinksAdapter);
+Vue.use(VueRouter);
 
 document.addEventListener('turbolinks:load', () => {
-  const el = document.body.appendChild(document.createElement('hello'))
-  const app = new Vue({
-    el,
-    // Router,
-    render: h => h(App),
-    components: { App },
-    
-  })
+// document.addEventListener('DOMContentLoaded', () => {
+  new Vue({
+    el: '#app',
+    router,
+    render: (h) => h(App),
+    components: { App }
+  });
+});
 
-  // console.log(app)
-  // const app = new Vue({
-  // el: '#hello',
-  // components: { App },
-  // Router
-  // })
-})

@@ -1,25 +1,20 @@
 <template lang="haml">
   %div.home
     %Header
-   
-
-    -# %Footer
+    %Footer
 </template>
 
 <script>
-// import Header from "../header";
-// import Footer from "../footer";
-
 import Header from "../Header.vue";
-// import Footer from "../Footer.vue";
+import Footer from "../Footer.vue";
 
 export default {
-  // data: function () {
-  //   return {
-  //     name: 'Home'
-  //   }
-  // },
-  components: { Header,},
+  data: function () {
+    return {
+      name: 'main-page'
+    }
+  },
+  components: { Header, Footer},
 }
 
 </script>

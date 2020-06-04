@@ -1,18 +1,21 @@
-import Vue from 'vue/dist/vue.esm'
+import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from "../components/home/index"
 
 Vue.use(VueRouter)
-export default router
 
-var router = new VueRouter({
+
+const router = new VueRouter({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      component: { Home },
+      component: Home,
       name: 'home',
     },
   ]
 })
+
+export default router
 
 

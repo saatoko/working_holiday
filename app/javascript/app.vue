@@ -1,24 +1,24 @@
 <template lang="haml">
-  -# %div{id: "app"}
-  -#   %router-link{to: "{ name: 'home'}"}
-  -#   %router.push({ name: 'home'})
+  %router-view
+    %router-link{to: "{ name: 'home'}"}
+    -# %router.push({ name: 'home'})
 
-  %Home
 </template>
 
 <script>
 // import Vue from 'vue/dist/vue.esm'
+// import router from './router/router'
 import Home from "./components/home/index";
-
 export default {
   components: { Home },
-  
 }
 
-// var app = new Vue({
-//   router: router
-// }).$mount('#app')
-
+// document.addEventListener('DOMContentLoaded', () => {
+  // new Vue({
+  //   router: router
+  // }).$mount('#app')
+  // console.log("aaaaaaa")
+// });
 
 </script>
 
