@@ -9,17 +9,22 @@
           %v-fa{icon: "envelope-open-text"}
         %li.icons__third
           %v-fa{icon: "info-circle"}
+        
+        
         %li.icons__fourth
+          %UserIcon
           %v-fa{icon: "user"}
 </template>
 
 <script>
+import UserIcon from "./UserIcon.vue";
 export default {
   data: function () {
     return {
       name: 'navigation-component',
     }
   },
+  components: { UserIcon },
 }
 </script>
 

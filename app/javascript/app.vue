@@ -14,10 +14,10 @@ export default {
 }
 
 // document.addEventListener('DOMContentLoaded', () => {
-  // new Vue({
-  //   router: router
-  // }).$mount('#app')
-  // console.log("aaaaaaa")
+//   new Vue({
+//     router: router
+//   }).$mount('#app')
+//   console.log("aaaaaaa")
 // });
 
 </script>
