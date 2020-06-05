@@ -1,9 +1,9 @@
 <template lang="haml">
   %div.header
-    %div.header-block
-      %v-fa.header-block__home{icon: "home"}
-      %h1.header-block__title {{ app_name }}
-      %p.header-block__subtitle {{app_subtitle}}
+    %div.header__block
+      %v-fa.header__block--iconhome{icon: "home"}
+      %h1.header__block--title {{ app_name }}
+      %p.header__block--subtitle {{app_subtitle}}
     %Navbar
 </template>
 
@@ -26,7 +26,7 @@ export default {
   width: 100%;
   height: auto;
   background-color: rgb(53, 83, 167);
-  .header-block {
+  &__block {
     width: 80%;
     margin: 0 auto;
     height: 100%;
@@ -38,17 +38,17 @@ export default {
     -webkit-align-items: center; 
     align-items: center; 
     font-family: ヒラギノ丸ゴ ProN;
-    &__home {
+    &--iconhome {
     font-size: 3rem;
     }
-    &__title {
+    &--title {
       font-size: 2rem;
       text-align: center;
       padding-left: 1rem;
       font-weight: bold;
       letter-spacing: 0.2rem;
     }
-    &__subtitle {
+    &--subtitle {
       margin-left:auto;
       font-size: 1.3rem;
       color: rgb(228, 223, 195);
