@@ -21,7 +21,6 @@ import UserIcon from "./UserIcon.vue";
 export default {
   data: function () {
     return {
-      name: 'navigation-component',
     }
   },
   components: { UserIcon },

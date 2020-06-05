@@ -11,7 +11,6 @@ import Footer from "../Footer.vue";
 export default {
   data: function () {
     return {
-      name: 'main-page'
     }
   },
   components: { Header, Footer},

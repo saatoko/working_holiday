@@ -1,5 +1,8 @@
 <template lang="haml">
 %div{id: "user-pull"} 
+  -# %user-pulllist
+
+
   -# %div{v:{'on:mouseleave': 'isShown = false'}}
   -# %div{'v-on:mouseleave': 'isShown = false'}
 -# %div{"v-on:mouseleave" => "isShown = false"}
@@ -20,7 +23,6 @@ import anime from "animejs"
 // import anime from 'animejs/lib/anime.es.js'
 
 export default {
-  // name: user-pull,
   data: function () {
     return {
       el: '#user-pull',
