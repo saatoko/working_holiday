@@ -10,10 +10,8 @@
 -#     %a.menu{href: "#"}{{name}}
 -#   %transition
 
-
   -# %p{{name}}
       -# %a.menu{:href => "#"} {{name}}
-  
 
 
 </template>
@@ -39,11 +37,9 @@ export default {
     }
   },
  
-  
-  // render: function (){
-  //   return {
-  //     <div @mouseleave="isShown = false">
-  //       <p @mouseover="isShown = true"><a href ="#" class="menu">{{name}}</a></p>
+  // template: `
+  //   <div @mouseleave="isShown = false">
+  //     <p @mouseover="isShown = true"><a href ="#" class="menu">{{name}}</a></p>
   //       <transition
   //         @before-enter="beforeEnter"
   //         @enter="enter"
@@ -57,9 +53,33 @@ export default {
   //         </ul>
   //       </transition>
   //     </div>
-  //   }
-  // }
-  // ,
+  // `,
+
+
+  // render: function (){
+  //   return {
+  //     <div className='huga'>M</div>
+
+
+      // <div
+      //   on-mouseleave = {() => "isShown = false"}
+      // @mouseleave="isShown = false">
+        // <p @mouseover="isShown = true"><a href ="#" class="menu">{{name}}</a></p>
+        // <transition
+        //   @before-enter="beforeEnter"
+        //   @enter="enter"
+        //   @leave="leave"
+        //   :css="false"
+        // >
+        //   <ul v-if="isShown">
+        //     <li v-for="item in items" :key="item">
+        //       <a href="#" class="menu-item">{{item}}</a>
+        //     </li>
+        //   </ul>
+        // </transition>
+      // </div>
+  //   },
+  // },
 
   method: {
     beforeEnter: function (el) {
