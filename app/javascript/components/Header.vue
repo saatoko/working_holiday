@@ -10,11 +10,11 @@
 <script>
 import Navbar from "./Navbar.vue";
 export default {
+  
   data: function () {
     return {
       app_name: "ワーキングホリデー相談掲示板",
       app_subtitle: "経験談、相談、計画、なんでも投稿！!",
-      name: 'header-component'
     }
   },
   components: { Navbar },

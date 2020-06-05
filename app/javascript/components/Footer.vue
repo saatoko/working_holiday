@@ -12,7 +12,6 @@ import moment from "moment";
 export default {
   data: function () {
     return {
-      name: 'footer-component'
     }
   },
   filters: {
@@ -43,9 +42,9 @@ export default {
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      .years-now {
-        
-      }
+      // .years-now {
+       
+      // }
       .partner-now {
         padding-left: 2.5rem;
         
