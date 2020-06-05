@@ -12,10 +12,9 @@
         
         
         %li.icons__fourth
-          
-          %v-fa{icon: "user"}
+          -# %v-fa{icon: "user"}
+          %UserIcon
 
-        -# %UserIcon
 </template>
 
 <script>

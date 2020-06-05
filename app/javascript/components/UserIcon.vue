@@ -1,18 +1,5 @@
 <template lang="haml">
-%div{id: "user-pull"} 
-  -# %user-pulllist
-
-
-  -# %div{v:{'on:mouseleave': 'isShown = false'}}
-  -# %div{'v-on:mouseleave': 'isShown = false'}
--# %div{"v-on:mouseleave" => "isShown = false"}
--#   %p{"v-on:mouseover" => "isShown = true"}
--#     %a.menu{href: "#"}{{name}}
--#   %transition
-
-  -# %p{{name}}
-      -# %a.menu{:href => "#"} {{name}}
-
+%ul{id: "user-pull"} 
 
 </template>
 
@@ -37,23 +24,26 @@ export default {
     }
   },
  
-  // template: `
-  //   <div @mouseleave="isShown = false">
-  //     <p @mouseover="isShown = true"><a href ="#" class="menu">{{name}}</a></p>
-  //       <transition
-  //         @before-enter="beforeEnter"
-  //         @enter="enter"
-  //         @leave="leave"
-  //         :css="false"
-  //       >
-  //         <ul v-if="isShown">
-  //           <li v-for="item in items" :key="item">
-  //             <a href="#" class="menu-item">{{item}}</a>
-  //           </li>
-  //         </ul>
-  //       </transition>
-  //     </div>
-  // `,
+  template: `
+    <li @mouseleave="isShown = false">
+      <ul @mouseover="isShown = true"><v-fa{icon: "user"} class="menu"></v-fa></ul>
+
+        // anime.js用
+        <transition
+          @before-enter="beforeEnter"
+          @enter="enter"
+          @leave="leave"
+          :css="false"
+        >
+
+          <ul v-if="isShown">
+            <li v-for="item in items" :key="item">
+              <a href="#" class="menu-item">{{item}}</a>
+            </li>
+          </ul>
+        </transition>
+      </div>
+  `,
 
 
   // render: function (){
@@ -106,11 +96,10 @@ export default {
     }
   }
 };
-
 </script>
 
 <style scoped lang="scss" scoped>
-div, ul, li,a, p {
+div, ul, li {
   margin: 0;
   padding: 0;
 }
