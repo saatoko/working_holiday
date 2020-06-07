@@ -10,21 +10,21 @@
         %li.icons__third
           %v-fa{icon: "info-circle"}
         
-        
-        %li.icons__fourth
+        %li.icons__fourth{id: "user-pull"}
           -# %v-fa{icon: "user"}
-          %UserIcon
+          %UserPullDownMenu
 
 </template>
 
 <script>
-import UserIcon from "./UserIcon.vue";
+import UserPullDownMenu from "./UserPullDownMenu.vue";
 export default {
   data: function () {
     return {
     }
   },
-  components: { UserIcon },
+  components: { UserPullDownMenu },
+  // template: '<UserPullDownMenu>'
 }
 </script>
 

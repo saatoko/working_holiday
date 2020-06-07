@@ -1,8 +1,3 @@
-<template lang="haml">
-%ul{id: "user-pull"} 
-
-</template>
-
 <script>
 import anime from "animejs"
 // import anime from 'animejs/lib/anime.es.js'
@@ -10,9 +5,9 @@ import anime from "animejs"
 export default {
   data: function () {
     return {
-      el: '#user-pull',
+      // el: '#user-pull',
       isShown: 'false',
-      name: 'user-menu',
+      name: 'ユーザーメニュー',
       items: [
         'プロフィール編集',
         'ログアウト',
@@ -23,53 +18,28 @@ export default {
       ]
     }
   },
- 
-  template: `
-    <li @mouseleave="isShown = false">
-      <ul @mouseover="isShown = true"><v-fa{icon: "user"} class="menu"></v-fa></ul>
 
-        // anime.js用
+  template:`
+  <div>
+    <ul @mouseleave="isShown = false">
+      <li @mouseover="isShown = true"><v-fa icon="user"></v-fa></li>
         <transition
           @before-enter="beforeEnter"
           @enter="enter"
           @leave="leave"
           :css="false"
         >
-
           <ul v-if="isShown">
+            <li class="menu">{{name}}</li>
             <li v-for="item in items" :key="item">
               <a href="#" class="menu-item">{{item}}</a>
             </li>
           </ul>
         </transition>
-      </div>
+      </li>
+    </ul>
+  </div>
   `,
-
-
-  // render: function (){
-  //   return {
-  //     <div className='huga'>M</div>
-
-
-      // <div
-      //   on-mouseleave = {() => "isShown = false"}
-      // @mouseleave="isShown = false">
-        // <p @mouseover="isShown = true"><a href ="#" class="menu">{{name}}</a></p>
-        // <transition
-        //   @before-enter="beforeEnter"
-        //   @enter="enter"
-        //   @leave="leave"
-        //   :css="false"
-        // >
-        //   <ul v-if="isShown">
-        //     <li v-for="item in items" :key="item">
-        //       <a href="#" class="menu-item">{{item}}</a>
-        //     </li>
-        //   </ul>
-        // </transition>
-      // </div>
-  //   },
-  // },
 
   method: {
     beforeEnter: function (el) {
@@ -114,7 +84,8 @@ div {
 }
 
 .menu {
-  width: 980px;
+  // width: 90px;
+  width: 150px;
   text-decoration: none;
   background-color: #9999FF;
   color: #000;
@@ -123,9 +94,11 @@ div {
   height: 30px;
   line-height: 30px;
   text-align: center;  
+  // position: relative;
 
 }
 .menu-item {
+  // position: absolute;
   width: 90px;
   text-decoration: none;
   background-color: #CCCCFF;
