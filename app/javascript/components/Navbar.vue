@@ -9,9 +9,7 @@
           %v-fa{icon: "envelope-open-text"}
         %li.icons__third
           %v-fa{icon: "info-circle"}
-        
-        %li.icons__fourth{id: "user-pull"}
-          -# %v-fa{icon: "user"}
+        %li.icons__fourth
           %UserPullDownMenu
 
 </template>
@@ -24,7 +22,6 @@ export default {
     }
   },
   components: { UserPullDownMenu },
-  // template: '<UserPullDownMenu>'
 }
 </script>
 

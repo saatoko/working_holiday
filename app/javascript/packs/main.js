@@ -6,8 +6,7 @@ import App from '../app.vue'
 
 import router from "../router/router.js"
 import VueRouter from 'vue-router'
-import anime from "animejs";
-// import anime from 'animejs/lib/anime.es.js';
+import anime from 'animejs/lib/anime.es.js';
 import moment from "moment";
 
 import { library } from '@fortawesome/fontawesome-svg-core'
