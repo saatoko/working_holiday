@@ -49,7 +49,7 @@ export default {
       float: left;
       width: 60%;
       font-weight: bold;
-      color: rgb(126, 18, 18); 
+      color: #6666cc;
     }
     .icons{
       text-align: right;
@@ -57,12 +57,12 @@ export default {
       width: 40%;
       color: rgb(170, 158, 47);
       height: 100%;
-      padding: 0.3rem 0;
       display:table; 
       table-layout: fixed;
       ul.icons, li{
         font-size: 2rem;
         display:table-cell; 
+        text-align: right;
       }
     }
   }
