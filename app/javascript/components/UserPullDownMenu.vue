@@ -81,23 +81,29 @@ div, ul, li, p, .user-icon{
   list-style-type: none;
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 0.7rem;
+  position: absolute;
+  z-index: 1;
+  width: auto;
   .menu {
-  width: 150px;
-  text-decoration: none;
-  color: #000;
-  border: solid 1px #6666cc;
-  display: block;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;  
+    padding: 0 1rem;
+    width: auto;
+    text-decoration: none;
+    color: #000;
+    border: solid 1px #6666cc;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;  
+    background-color: #d1d1ff;
+    font-weight: bold;
   }
   .menu-item {
-    width: 150px;
+    padding: 0 1rem;
     text-decoration: none;
-    background-color: #CCCCFF;
+    background-color: #fff;
     color: #000;
-    border: solid 1px #6666CC;
+    border: solid 1px #6666cc;
     border-top: none;
     display: block;
     height: 30px;
