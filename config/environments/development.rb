@@ -62,4 +62,6 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   
   config.sass.inline_source_maps = true
+
+  config.web_console.whitelisted_ips = %w( 0.0.0.0/0 ::/0 )
 end

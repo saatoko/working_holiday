@@ -13,6 +13,22 @@ const router = new VueRouter({
       component: Home,
       name: 'home',
     },
+    // {
+    //   path: '/user/SignUp',
+    //   component: SignUp,
+    //   name: 'signup',
+    // },
+    // {
+    //   path: '/user/SignIn',
+    //   component: SignIn,
+    //   name: 'signin',
+    // },
+    // {
+    //   path: '/user/SignOut',
+    //   component: SignOut,
+    //   name: 'signout',
+    // },
+
   ]
 })
 

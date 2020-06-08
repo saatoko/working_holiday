@@ -1,7 +1,7 @@
 <template lang="haml">
   %router-view
-    %router-link{to: "{ name: 'home'}"}
-    -# %router.push({ name: 'home'})
+    -# %router-link{to: "{ name: 'home'}"}
+    %router.push({ name: 'home'})
 
 </template>
 
