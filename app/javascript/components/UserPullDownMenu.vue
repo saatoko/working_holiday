@@ -33,6 +33,7 @@ export default {
         <ul v-if="isShown" class="show-usermenu">
           <li class="menu">{{name}}
           </li>
+          
           <li v-for="item in items" :key="item">
             <a href="#" class="menu-item">{{item}}</a>
           </li>
