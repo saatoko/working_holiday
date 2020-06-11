@@ -5,6 +5,3 @@ const vue = require('./loaders/vue')
 environment.plugins.prepend('VueLoaderPlugin', new VueLoaderPlugin())
 environment.loaders.prepend('vue', vue)
 module.exports = environment
-
-const haml = require('./loaders/haml')
-environment.loaders.prepend('haml', haml)

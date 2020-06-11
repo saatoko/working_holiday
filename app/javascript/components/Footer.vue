@@ -1,10 +1,12 @@
-<template lang="haml">
-  %div.footer 
-    %div.footer__block 
-      %h1.footer__block--text
-        %p.years-now {{ new Date() | moment() }}現在
-        %p.partner-now ワーキングホリデー協定国数 〇〇カ国
-       
+<template>
+  <div class="footer">
+    <div class="footer__block ">
+      <h1 class="footer__block--text">
+        <p class="years-now">{{ new Date() | moment() }}現在</p>
+        <p class="partner-now">ワーキングホリデー協定国数 〇〇カ国</p>
+      </h1>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -47,7 +49,6 @@ export default {
       // }
       .partner-now {
         padding-left: 2.5rem;
-        
       }
     }
   }

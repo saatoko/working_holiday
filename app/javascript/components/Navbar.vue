@@ -1,20 +1,25 @@
-<template lang="haml">
-  %div.navbar
-    %div.navbar__block.clearfix
-      %h1.country-choose 仮)情報の欲しい国を選択してください。
-      %ul.icons
-        %li.icons__first
-          %v-fa{icon: "plane-departure"}
-        %li.icons__second
-          %v-fa{icon: "envelope-open-text"}
-        %li.icons__third
-          -# %router-view 
-          %router-link{to: "{ name: 'siteguide'}"}
-            %v-fa{icon: "info-circle"}
-          
-        %li.icons__fourth
-          %UserPullDownMenu
-
+<template>
+  <div class="navbar">
+    <div class="navbar__block clearfix">
+      <h1 class="country-choose">仮)情報の欲しい国を選択してください。</h1>
+      <ul class="icons">
+        <li class="icons__first">
+          <v-fa icon="plane-departure"></v-fa>
+        </li>
+        <li class="icons__second">
+          <v-fa icon="envelope-open-text"></v-fa>
+        </li>
+        <li class="icons__third">
+          <router-link :to="{name: 'siteguide'}">
+            <v-fa icon="info-circle"></v-fa>
+          </router-link>
+        </li>
+        <li class="icons__fourth">
+          <UserPullDownMenu></UserPullDownMenu>
+        </li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script>

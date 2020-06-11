@@ -1,8 +1,8 @@
-<template lang="haml">
-  %div.guide
-    %div ページ紹介
-      %h1 {{name}}
-    -# %router-view
+<template>
+  <div class="guide">
+    ページ紹介
+    <h1>{{name}}</h1>
+  </div>
 </template>
 
 <script>
@@ -19,7 +19,6 @@ export default {
   .guide {
   width: 100%;
   height: 100vh;
-  // height: 100%;
   margin: 0;
   padding: 0;
 }
