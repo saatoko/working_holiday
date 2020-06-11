@@ -1,17 +1,11 @@
-<template lang="haml">
--# %div 
--#   %router-view 
--#     %router-link{to: "{ name: 'home'}"} ホーム
-  -# %router-link{":to" => "{ name: 'signup'}"}
-
-%div
-  %Header
-
-  -# %router-link{to: "{ name: 'home'}"} ホーム
-  -# %router-link{to: "{ name: 'signup'}"} ここ
-  -# %router-link{to: "{ name: 'home'}"}
-  %router-view 
-  %Footer
+<template>
+<div>
+  <Header></Header>
+  <!-- <router-link :to="{name: 'home'}">ホーム</router-link>
+  <router-link :to="{name: 'signup'}">新規登録</router-link>  -->
+  <router-view/> 
+  <Footer></Footer>
+</div>
 
 
 </template>

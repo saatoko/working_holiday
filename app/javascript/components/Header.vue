@@ -1,11 +1,14 @@
-<template lang="haml">
-  %div.header
-    %div.header__block
-      -# %router-link{to: "{ name: 'home'}"}
-      %v-fa.header__block--iconhome{icon: "home"}
-      %h1.header__block--title {{ app_name }}
-      %p.header__block--subtitle {{app_subtitle}}
-    %Navbar
+<template>
+  <div class="header">
+    <div class="header__block">
+      <router-link :to="{name: 'home'}">
+        <v-fa icon="home" class="header__block--iconhome" />
+      </router-link>
+      <h1 class="header__block--title">{{ app_name }}</h1>
+      <p class="header__block--subtitle">{{app_subtitle}}</p>
+    </div>
+    <Navbar></Navbar>
+  </div>
 </template>
 
 <script>
