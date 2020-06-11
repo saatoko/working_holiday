@@ -1,6 +1,7 @@
 <template lang="haml">
   %div.header
     %div.header__block
+      -# %router-link{to: "{ name: 'home'}"}
       %v-fa.header__block--iconhome{icon: "home"}
       %h1.header__block--title {{ app_name }}
       %p.header__block--subtitle {{app_subtitle}}

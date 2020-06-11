@@ -8,6 +8,9 @@ import router from "../router/router.js"
 import VueRouter from 'vue-router'
 import anime from 'animejs/lib/anime.es.js';
 import moment from "moment";
+// import axios from 'axios'
+// axios.defaults.baseURL = process.env.BASE_URL;
+// export default axios;
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faHome, faPlaneDeparture, faEnvelopeOpenText, faUser, faSearch, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
@@ -20,6 +23,7 @@ Vue.component('v-fa', FontAwesomeIcon);
 
 Vue.use(TurbolinksAdapter);
 Vue.use(VueRouter);
+// Vue.use(axios);
 
 document.addEventListener('turbolinks:load', () => {
 // document.addEventListener('DOMContentLoaded', () => {

@@ -8,7 +8,10 @@
         %li.icons__second
           %v-fa{icon: "envelope-open-text"}
         %li.icons__third
-          %v-fa{icon: "info-circle"}
+          -# %router-view 
+          %router-link{to: "{ name: 'siteguide'}"}
+            %v-fa{icon: "info-circle"}
+          
         %li.icons__fourth
           %UserPullDownMenu
 

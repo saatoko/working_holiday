@@ -13,7 +13,15 @@ export default {
         '過去投稿記事',
         '新規登録',
         'ログイン',
-      ]
+      ],
+      // items: [
+      //   { label: 'プロフィール編集', url: '' },
+      //   { label: 'ログアウト', url: '' },
+      //   { label: '経験談投稿', url: '' },
+      //   { label: '過去投稿記事', url: '' },
+      //   { label: '新規登録', url: '' },
+      //   { label: 'ログイン', url: '' },
+      // ],
     }
   },
 
@@ -34,15 +42,44 @@ export default {
           <li class="menu">{{name}}
           </li>
           
-          <li v-for="item in items" :key="item">
+
+          <li 
+            v-for="item in items" 
+            :key="item"
+          >
             <a href="#" class="menu-item">{{item}}</a>
+
+          
+
+            
+
           </li>
         </ul>
       </transition>
     </div>
   `,
 
+  // <router-link :to="#" class="menu-item">{{item}}</router-link>
+  
+  // <li 
+  //   v-for="item in items" 
+  //   :key="item"
+  //   @click="getCreateUrl(item.url)"
+  // >
+  // <li
+  //   v-for="item in items"
+  //   v-bind:key="item.item_id"
+  //   <a href="javascript:void(0)" @click.prevent="onClick(item.path)">
+  //     {{item}}
+  //   </a>
+  // >  
+
   methods: {
+
+    // getCreateUrl(url) {
+    //   location.href=`${url}`
+    // },
+
     beforeEnter: function (el) {
       el.style.height = '0px'
       el.style.opacity = '0'
