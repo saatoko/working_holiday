@@ -21,6 +21,7 @@
         @click="getCreateUrl(item.path)"
         >  
         <router-link :to="{label: item.path}" class="menu-item">{{item.label}}</router-link>
+        <!-- <router-link :to="{ label: item.path, query: { url: thread.url, title: thread.title }}"> -->
         
       </li>
     </ul>
@@ -49,7 +50,12 @@ export default {
 
   methods: {
     getCreateUrl(path) {
-      this.$router.push(path)
+      if (this.$router.path !== { path: this.currentRoutePath }) {
+        this.$router.push(path)
+      }
+
+      // this.$router.push(path)
+
       // location.href=`${path}`
     },
     
