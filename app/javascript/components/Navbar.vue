@@ -14,7 +14,7 @@
             <v-fa icon="info-circle"></v-fa>
           </router-link>
         </li>
-        <li class="icons__fourth">
+        <li class="icons__fourth" id="user-menu">
           <UserPullDownMenu></UserPullDownMenu>
         </li>
       </ul>
