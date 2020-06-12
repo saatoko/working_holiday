@@ -26,12 +26,13 @@
 |----|----------|
 |Ruby on Rails|Rails 6.0.2.2|
 |Ruby|ruby 2.5.7|
-|Vue.js|Vue.js 2.6.1|
+|Vue.js|Vue.js 2.6.11|
 |Vue Router|
 |anime.js|
 |moment.js|
 |HTML|Haml記法|
 |CSS|SCSS記法|
+|単一ファイルコンポーネント|erb記法, SCSS記法|
 
 ## データベース
 - 開発環境は、mysql2を使用

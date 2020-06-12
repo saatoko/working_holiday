@@ -1,9 +1,50 @@
+<template>
+<div v-on:mouseleave="isShown = false">
+  <ul v-on:mouseover="isShown = true">
+    <v-fa icon="user" class="user-icon">
+    </v-fa>
+  </ul>
+
+  <transition
+    v-on:before-enter="beforeEnter"
+    v-on:enter="enter"
+    v-on:leave="leave"
+    :css="false"
+  >
+    <ul v-if="isShown" class="show-usermenu">
+      <li class="menu">{{name}}
+      </li>
+
+      <li 
+        v-for="(item, i) in items" 
+        v-bind:key="`bad-sample_${i}`"
+      >
+
+      <!-- <li 
+        v-for="item in items" 
+        :key="item"
+        @click="getCreateUrl(item.path)"
+      > -->
+
+        <!-- <template v-if="isInternalLink(item.path)">
+          <router-link to="#" class="menu-item">{{item}}</router-link>
+        </template> -->
+
+        <a href="#" class="menu-item">{{item}}</a>
+
+      </li>
+    </ul>
+  </transition>
+</div>  
+</template>
+
 <script>
 import anime from 'animejs/lib/anime.es.js'
 
 export default {
   data: function () {
     return {
+      el: '#user-menu',
       isShown: false,
       name: 'ユーザーメニュー',
       items: [
@@ -15,64 +56,15 @@ export default {
         'ログイン',
       ],
       // items: [
-      //   { label: 'プロフィール編集', url: '' },
-      //   { label: 'ログアウト', url: '' },
-      //   { label: '経験談投稿', url: '' },
-      //   { label: '過去投稿記事', url: '' },
-      //   { label: '新規登録', url: '' },
-      //   { label: 'ログイン', url: '' },
+      //   { label: 'プロフィール編集', path: '' },
+      //   { label: 'ログアウト', path: '' },
+      //   { label: '経験談投稿', path: '' },
+      //   { label: '過去投稿記事', path: '' },
+      //   { label: '新規登録', path: '' },
+      //   { label: 'ログイン', path: '' },
       // ],
     }
   },
-
-  template:`
-    <div @mouseleave="isShown = false">
-      <ul @mouseover="isShown = true">
-        <v-fa icon="user" class="user-icon">
-        </v-fa>
-      </ul>
-
-      <transition
-        v-on:before-enter="beforeEnter"
-        v-on:enter="enter"
-        v-on:leave="leave"
-        :css="false"
-      >
-        <ul v-if="isShown" class="show-usermenu">
-          <li class="menu">{{name}}
-          </li>
-          
-
-          <li 
-            v-for="item in items" 
-            :key="item"
-          >
-            <a href="#" class="menu-item">{{item}}</a>
-
-          
-
-            
-
-          </li>
-        </ul>
-      </transition>
-    </div>
-  `,
-
-  // <router-link :to="#" class="menu-item">{{item}}</router-link>
-  
-  // <li 
-  //   v-for="item in items" 
-  //   :key="item"
-  //   @click="getCreateUrl(item.url)"
-  // >
-  // <li
-  //   v-for="item in items"
-  //   v-bind:key="item.item_id"
-  //   <a href="javascript:void(0)" @click.prevent="onClick(item.path)">
-  //     {{item}}
-  //   </a>
-  // >  
 
   methods: {
 
