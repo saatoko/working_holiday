@@ -31,7 +31,9 @@
         </template> -->
 
         <a href="#" class="menu-item">{{item}}</a>
-
+        <!-- <a href="javascript:void(0)" @click.prevent="onClick(item.path)">
+          {{ item.label }}
+        </a> -->
       </li>
     </ul>
   </transition>
@@ -69,6 +71,17 @@ export default {
 
     // getCreateUrl(url) {
     //   location.href=`${url}`
+    // },
+
+    // isInternalLink (path) {
+    //   return !/^https?:\/\//.test(path)
+    // },
+    // onClick (path) {
+    //   if (this.isInternalLink(path)) {
+    //     this.$router.push(path)
+    //   } else {
+    //     location.href = path
+    //   }
     // },
 
     beforeEnter: function (el) {
