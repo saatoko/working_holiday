@@ -18,22 +18,10 @@
       <li 
         v-for="(item, i) in items" 
         v-bind:key="`bad-sample_${i}`"
-      >
-
-      <!-- <li 
-        v-for="item in items" 
-        :key="item"
         @click="getCreateUrl(item.path)"
-      > -->
-
-        <!-- <template v-if="isInternalLink(item.path)">
-          <router-link to="#" class="menu-item">{{item}}</router-link>
-        </template> -->
-
-        <a href="#" class="menu-item">{{item}}</a>
-        <!-- <a href="javascript:void(0)" @click.prevent="onClick(item.path)">
-          {{ item.label }}
-        </a> -->
+        >  
+        <router-link :to="{label: item.path}" class="menu-item">{{item.label}}</router-link>
+        
       </li>
     </ul>
   </transition>
@@ -49,41 +37,22 @@ export default {
       isShown: false,
       name: 'ユーザーメニュー',
       items: [
-        'プロフィール編集',
-        'ログアウト',
-        '経験談投稿',
-        '過去投稿記事',
-        '新規登録',
-        'ログイン',
+        // { label: 'プロフィール編集', path: '#' },
+        { label: 'ログアウト', path: 'signout' },
+        // { label: '経験談投稿', path: '#' },
+        // { label: '過去投稿記事', path: '#' },
+        { label: '新規登録', path: 'signup' },
+        { label: 'ログイン', path: 'signin' },
       ],
-      // items: [
-      //   { label: 'プロフィール編集', path: '' },
-      //   { label: 'ログアウト', path: '' },
-      //   { label: '経験談投稿', path: '' },
-      //   { label: '過去投稿記事', path: '' },
-      //   { label: '新規登録', path: '' },
-      //   { label: 'ログイン', path: '' },
-      // ],
     }
   },
 
   methods: {
-
-    // getCreateUrl(url) {
-    //   location.href=`${url}`
-    // },
-
-    // isInternalLink (path) {
-    //   return !/^https?:\/\//.test(path)
-    // },
-    // onClick (path) {
-    //   if (this.isInternalLink(path)) {
-    //     this.$router.push(path)
-    //   } else {
-    //     location.href = path
-    //   }
-    // },
-
+    getCreateUrl(path) {
+      this.$router.push(path)
+      // location.href=`${path}`
+    },
+    
     beforeEnter: function (el) {
       el.style.height = '0px'
       el.style.opacity = '0'
