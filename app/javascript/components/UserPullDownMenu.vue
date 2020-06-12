@@ -44,7 +44,6 @@ import anime from 'animejs/lib/anime.es.js'
 export default {
   data: function () {
     return {
-      el: '#user-menu',
       isShown: false,
       name: 'ユーザーメニュー',
       items: [
