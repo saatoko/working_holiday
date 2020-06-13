@@ -20,9 +20,9 @@
         v-bind:key="`bad-sample_${i}`"
         @click="getCreateUrl(item.path)"
         >  
-        <router-link :to="{label: item.path}" class="menu-item">{{item.label}}</router-link>
-        <!-- <router-link :to="{ label: item.path, query: { url: thread.url, title: thread.title }}"> -->
+        <!-- <router-link :to="{label: item.path}" class="menu-item">{{item.label}}</router-link> -->
         
+        <ul class="menu-item">{{item.label}}</ul>
       </li>
     </ul>
   </transition>
@@ -39,24 +39,25 @@ export default {
       name: 'ユーザーメニュー',
       items: [
         // { label: 'プロフィール編集', path: '#' },
-        { label: 'ログアウト', path: 'signout' },
+        { label: 'ログアウト', path: '/users/sign_out' },
         // { label: '経験談投稿', path: '#' },
         // { label: '過去投稿記事', path: '#' },
-        { label: '新規登録', path: 'signup' },
-        { label: 'ログイン', path: 'signin' },
+        { label: '新規登録', path: '/users/sign_up' },
+        { label: 'ログイン', path: '/users/sign_in'},
+        
       ],
     }
   },
 
   methods: {
     getCreateUrl(path) {
-      if (this.$router.path !== { path: this.currentRoutePath }) {
+      // console.log("before if");
+      // console.log(this.$route.path);
+      // console.log(path);
+      if (this.$route.path !== path) {
+        // console.log("inside if");
         this.$router.push(path)
       }
-
-      // this.$router.push(path)
-
-      // location.href=`${path}`
     },
     
     beforeEnter: function (el) {

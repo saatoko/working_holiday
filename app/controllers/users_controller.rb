@@ -32,7 +32,7 @@ class UsersController < ApplicationController
       :profile,
       :situation,
       :country,
-      :experience_country
+      :experience_country,
       :duration
     )
   end
