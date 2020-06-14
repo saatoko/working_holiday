@@ -19,10 +19,11 @@
         v-for="(item, i) in items" 
         v-bind:key="`bad-sample_${i}`"
         @click="getCreateUrl(item.path)"
+        class="menu-item"
         >  
+        {{item.label}}
         <!-- <router-link :to="{label: item.path}" class="menu-item">{{item.label}}</router-link> -->
         
-        <ul class="menu-item">{{item.label}}</ul>
       </li>
     </ul>
   </transition>
@@ -127,6 +128,7 @@ div, ul, li, p, .user-icon{
     height: 30px;
     line-height: 30px;
     text-align: center;
+    cursor: pointer;
   }
 }
 </style>
