@@ -1,6 +1,35 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
+  respond_to :json
+
+  def create
+    super do
+      if request.format.json?
+        render :json => {
+          'status' => 'ok',
+          'csrf_token' => form_authenticity_token,
+          'result' => {
+            'user' => {
+              'id' => @user.id,
+              'nickname' => @user.nickname
+              'age_id' => @user.age_id
+              'profession_id' => @user.profession_id
+              'gender_id' => @user.gender_id
+              'profile' => @user.profile
+              'situation' => @user.situation
+              'country' => @user.country
+              'experience_country' => @user.experience_country
+              'duration' => @user.duration
+            }
+          }
+        } and return
+      end
+    end
+  end
+end
+
+
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
@@ -59,4 +88,4 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
-end
+# end

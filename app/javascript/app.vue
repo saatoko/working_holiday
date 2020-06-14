@@ -1,9 +1,7 @@
 <template>
 <div>
   <Header></Header>
-  <!-- <router-link :to="{name: 'home'}">ホーム</router-link>
-  <router-link :to="{name: 'signup'}">新規登録</router-link>  -->
-  <router-view/> 
+    <router-view />
   <Footer></Footer>
 </div>
 

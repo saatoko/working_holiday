@@ -44,6 +44,7 @@ export default {
     font-family: ヒラギノ丸ゴ ProN;
     &--iconhome {
     font-size: 3rem;
+    color: #fff;
     }
     &--title {
       font-size: 2rem;

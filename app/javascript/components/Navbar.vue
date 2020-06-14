@@ -11,7 +11,7 @@
         </li>
         <li class="icons__third">
           <router-link :to="{name: 'siteguide'}">
-            <v-fa icon="info-circle"></v-fa>
+            <v-fa icon="info-circle" class="iconcircle"></v-fa>
           </router-link>
         </li>
         <li class="icons__fourth">
@@ -71,6 +71,9 @@ export default {
         font-size: 2rem;
         display:table-cell; 
         text-align: right;
+        .iconcircle {
+          color: rgb(170, 158, 47);
+        }
       }
     }
   }
