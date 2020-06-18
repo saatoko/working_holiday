@@ -1,7 +1,7 @@
 class CreatePublicConsultations < ActiveRecord::Migration[6.0]
   def change
     create_table :public_consultations do |t|
-      t.references :user,    null: false, foreign_key: true
+      # t.references :user,    null: false, foreign_key: true
       t.references :country, null: false, foreign_key: true
       t.string     :title,   null: false
       t.text       :content, null: false
