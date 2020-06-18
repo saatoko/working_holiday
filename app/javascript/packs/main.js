@@ -8,9 +8,18 @@ import router from "../router/router.js"
 import VueRouter from 'vue-router'
 import anime from 'animejs/lib/anime.es.js';
 import moment from "moment";
-// import axios from 'axios'
-// axios.defaults.baseURL = process.env.BASE_URL;
-// export default axios;
+import axios from 'axios'
+
+// true の場合の方が開発者向けのメッセージがコンソールによりたくさん出る。開発中はfalseにした方が良い。
+// Vue.config.productionTip = false; 
+
+// RailsのCSRFトークンをセット
+// let token = document.getElementsByName('csrf-token')[0].getAttribute('content')
+// axios.defaults.headers.common['X-CSRF-Token'] = token
+// axios.defaults.headers.common['Accept'] = 'application/json'
+
+// グローバルコンポーネントでaxiosを使用できる
+Vue.prototype.$axios = axios
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faHome, faPlaneDeparture, faEnvelopeOpenText, faUser, faSearch, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
@@ -23,7 +32,6 @@ Vue.component('v-fa', FontAwesomeIcon);
 
 Vue.use(TurbolinksAdapter);
 Vue.use(VueRouter);
-// Vue.use(axios);
 
 document.addEventListener('turbolinks:load', () => {
 // document.addEventListener('DOMContentLoaded', () => {

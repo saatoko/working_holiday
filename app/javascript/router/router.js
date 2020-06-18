@@ -25,21 +25,21 @@ const router = new VueRouter({
       component: SiteGuide,
       name: 'siteguide',
     },
-    {
-      path: '/users/sign_up',
-      component: SignUp,
-      name: 'signup',
-    },
-    {
-      path: '/users/sign_in',
-      component: SignIn,
-      name: 'signin',
-    },
-    {
-      path: '/users/sign_out',
-      component: SignOut,
-      name: 'signout',
-    },
+    // {
+    //   path: '/users/sign_up',
+    //   component: SignUp,
+    //   name: 'signup',
+    // },
+    // {
+    //   path: '/users/sign_in',
+    //   component: SignIn,
+    //   name: 'signin',
+    // },
+    // {
+    //   path: '/users/sign_out',
+    //   component: SignOut,
+    //   name: 'signout',
+    // },
   ]
 })
 
