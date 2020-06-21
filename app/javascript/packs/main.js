@@ -3,6 +3,7 @@ import TurbolinksAdapter from 'vue-turbolinks'
 import Vue from 'vue/dist/vue.esm'
 import App from '../app.vue'
 // import Vuex from 'vuex'
+import store from '../store'
 
 import router from "../router/router.js"
 import VueRouter from 'vue-router'
@@ -10,13 +11,10 @@ import anime from 'animejs/lib/anime.es.js';
 import moment from "moment";
 import axios from 'axios'
 
-// true の場合の方が開発者向けのメッセージがコンソールによりたくさん出る。開発中はfalseにした方が良い。
+import VueAxios from 'vue-axios'
+import { securedAxiosInstance, plainAxiosInstance } from '../axios/axios.js'
+// true の場合の方が開発者向けのメッセージがコンソールによりたくさん出る。開発中はtrueにした方が良い。
 // Vue.config.productionTip = false; 
-
-// RailsのCSRFトークンをセット
-// let token = document.getElementsByName('csrf-token')[0].getAttribute('content')
-// axios.defaults.headers.common['X-CSRF-Token'] = token
-// axios.defaults.headers.common['Accept'] = 'application/json'
 
 // グローバルコンポーネントでaxiosを使用できる
 Vue.prototype.$axios = axios
@@ -33,11 +31,19 @@ Vue.component('v-fa', FontAwesomeIcon);
 Vue.use(TurbolinksAdapter);
 Vue.use(VueRouter);
 
+Vue.use(VueAxios, {
+  secured: securedAxiosInstance,
+  plain: plainAxiosInstance
+})
+
 document.addEventListener('turbolinks:load', () => {
 // document.addEventListener('DOMContentLoaded', () => {
   new Vue({
     el: '#app',
     router,
+    store,
+    securedAxiosInstance,
+    plainAxiosInstance,
     anime,
     moment,
     render: (h) => h(App),

@@ -63,16 +63,17 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string|null: false, unique: true|
-|age_id|integer|null: false|
-|profession_id|integer|null: false|
-|gender_id|integer|null: false|
-|password|string|null: false|
-|profile|text|null: false|
-|situation_id|references|null: false, foreign_key: true|
-|country_id|references|null: false, foreign_key: true|
+|nickname|string|null: false|
+|email|string|null: false, unique: true|
+|password_digest|string|null: false|
+|age_id|integer||
+|profession_id|integer||
+|gender_id|integer||
+|profile|text||
+|situation_id|references|foreign_key: true|
+|country_id|references|foreign_key: true|
 |experience_country_id|references|foreign_key: { to_table: countries}|
-|duration|string|null: false|
+|duration|string||
 
 ### Association
 - belongs_to :country

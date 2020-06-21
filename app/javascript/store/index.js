@@ -10,5 +10,6 @@ export default new Vuex.Store({
   getters,
   actions,
   mutations,
+  // 本番環境でstrict(厳格)モードを有効にしてデプロイしてはいけない
   strict: process.env.NODE_ENV !== 'production'
 })

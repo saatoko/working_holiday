@@ -40,11 +40,11 @@ export default {
       name: 'ユーザーメニュー',
       items: [
         // { label: 'プロフィール編集', path: '#' },
-        // { label: 'ログアウト', path: '/users/sign_out' },
+        // { label: 'ログアウト', path: '/api/signin' },
         // { label: '経験談投稿', path: '#' },
         // { label: '過去投稿記事', path: '#' },
-        // { label: '新規登録', path: '/users/sign_up' },
-        // { label: 'ログイン', path: '/users/sign_in'},
+        { label: '新規登録', path: '/api/signup' },
+        { label: 'ログイン', path: '/api/signin'},
         
       ],
     }
