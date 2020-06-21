@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  # devise_for :users,
-  # controllers: {
-  #   sessions: 'sessions', 
-  #   registrations: 'registrations'
-  # }
   root to: 'home#index'
   resources :home, only: [:index] do
     collection do
@@ -11,6 +6,13 @@ Rails.application.routes.draw do
     end
   end
   # resources :users
-  resources :articles
+  # resources :articles
+
+  namespace :api do
+    post   'refresh', controller: :refresh,  action: :create
+    post   'signin',  controller: :signin,   action: :create
+    post   'signup',  controller: :signup,   action: :create
+    delete 'signin',  controller: :signin,   action: :destroy
+  end
 end
 

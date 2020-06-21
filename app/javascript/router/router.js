@@ -5,7 +5,7 @@ import Home from "../components/home/index"
 import SiteGuide from "../components/home/SiteGuide"
 import SignUp from "../components/user/SignUp"
 import SignIn from "../components/user/SignIn"
-import SignOut from "../components/user/SignOut"
+// import SignOut from "../components/user/SignOut"
 
 
 Vue.use(VueRouter)
@@ -25,18 +25,18 @@ const router = new VueRouter({
       component: SiteGuide,
       name: 'siteguide',
     },
+    {
+      path: '/api/signup',
+      component: SignUp,
+      name: 'signup',
+    },
+    {
+      path: '/api/signin',
+      component: SignIn,
+      name: 'signin',
+    },
     // {
-    //   path: '/users/sign_up',
-    //   component: SignUp,
-    //   name: 'signup',
-    // },
-    // {
-    //   path: '/users/sign_in',
-    //   component: SignIn,
-    //   name: 'signin',
-    // },
-    // {
-    //   path: '/users/sign_out',
+    //   path: '/api/signin',
     //   component: SignOut,
     //   name: 'signout',
     // },

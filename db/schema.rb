@@ -115,17 +115,16 @@ ActiveRecord::Schema.define(version: 2020_05_01_102933) do
     t.integer "age_id"
     t.integer "profession_id"
     t.integer "gender_id"
-    t.text "profile"
     t.bigint "situation_id"
     t.bigint "country_id"
     t.bigint "experience_country_id"
     t.string "duration"
+    t.text "profile"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["country_id"], name: "index_users_on_country_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["experience_country_id"], name: "index_users_on_experience_country_id"
-    t.index ["nickname"], name: "index_users_on_nickname", unique: true
     t.index ["situation_id"], name: "index_users_on_situation_id"
   end
 

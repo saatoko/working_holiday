@@ -1,15 +1,18 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  # before_action :configure_permitted_parameters, if: :devise_controller?
+  include JWTSessions::RailsAuthorization
+  # トークンをデコードできないか、JWTクレームが無効です。
+  rescue_from JWTSessions::Errors::Unauthorized, with: :not_authorized
 
-  # protected
+  private
 
-  # def configure_permitted_parameters
-  #   added_attrs = [:nickname, :age_id, :profession_id, :gender_id, :profile, :situation, :country, :experience_country, :duration]
-    
-  #   devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
-  #   devise_parameter_sanitizer.permit(:sign_in, keys: [:nickname])
-  #   devise_parameter_sanitizer.permit :account_update, keys: added_attrs
-  # end
+  # トークンからエンコードされたデータをフェッチするために使用できる
+  def current_user
+    @current_user ||= User.find(payload['user_id'])
+  end
+  
+  def not_authorized
+    render json: { error: 'Not authorized' }, status: :unauthorized
+  end
 end
