@@ -32,7 +32,6 @@
 
 <script>
 import anime from 'animejs/lib/anime.es.js'
-
 export default {
   data: function () {
     return {
@@ -45,7 +44,8 @@ export default {
         // { label: '過去投稿記事', path: '#' },
         { label: '新規登録', path: '/api/signup' },
         { label: 'ログイン', path: '/api/signin'},
-        
+        // { label: '新規登録', path: {name: 'signup'} },
+        // { label: 'ログイン', path: {name: 'signin'} },
       ],
     }
   },
@@ -57,6 +57,10 @@ export default {
       // console.log(path);
       if (this.$route.path !== path) {
         // console.log("inside if");
+        // this。$ router.pushの後にcatch句を使用すると、ブラウザーは例外が処理されたと見なすため、エラーの表示のみを回避できる
+        // this.$router.push(path).catch(()=>{});
+        
+        // プログラム上での遷移
         this.$router.push(path)
       }
     },

@@ -1,8 +1,9 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  # protect_from_forgery with: :exception
 
   include JWTSessions::RailsAuthorization
   # トークンをデコードできないか、JWTクレームが無効です。
+  # rescue_fromメソッドは、例外が発生した場合に実行するメソッドを指定できる。
   rescue_from JWTSessions::Errors::Unauthorized, with: :not_authorized
 
   private

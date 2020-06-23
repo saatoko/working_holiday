@@ -13,6 +13,7 @@ Vue.use(VueRouter)
 // { path: 'アクセスされるURL', component: '使用するコンポーネント', name: 'pathの名前'}
 
 const router = new VueRouter({
+
   mode: 'history',
   routes: [
     {
@@ -25,16 +26,30 @@ const router = new VueRouter({
       component: SiteGuide,
       name: 'siteguide',
     },
-    {
-      path: '/api/signup',
-      component: SignUp,
-      name: 'signup',
-    },
+    // {
+    //   path: '/api/signup',
+    //   component: SignUp,
+    //   name: 'signup',
+    // },
     {
       path: '/api/signin',
+      // redirect: '/',
       component: SignIn,
       name: 'signin',
     },
+    {
+      path: '/api/signup',
+      component: SignUp,
+      // ルートの遷移前に実行される
+      beforeEnter: function (to, from, next) {
+        if (to.query.redirect === 'true') {
+          next('/')
+        } else {
+          next()
+        }
+      }
+    }
+
     // {
     //   path: '/api/signin',
     //   component: SignOut,
@@ -45,4 +60,5 @@ const router = new VueRouter({
 
 export default router
 
+// routesにredirectするとpathの設定の意味がなくなる
 
